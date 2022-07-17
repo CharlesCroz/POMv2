@@ -1,4 +1,5 @@
 tar -tvf ../Data/Original/campus_complete.tar > filelist.txt
+g++ ./Step1Registration/main.cpp -fopenmp -o ./Step1Registration/SampleReg.out
 
 declare -i file_index=0
 
@@ -10,12 +11,12 @@ while read line; do
 		        filename="${filename%.*}";
 	                echo "Processing ${filename}...";
                 	tar -xf ../Data/Original/campus_complete.tar "${filename}.dat"
-	                #tar -xf ../Data/Original/campus_complete.tar "${filename}.txt"
-			echo "${filename}.dat + ${filename}.txt into data_${file_index}.txt"
+	                tar -xf ../Data/Original/campus_complete.tar "${filename}.txt"
+			./Step1Registration/SampleReg.out ./"${filename}" ../Data/Phase1/Step1/data_"${file_index}".txt
 			rm "${filename}.dat"
-			#rm "${filename}.txt"
+			rm "${filename}.txt"
         	        ((file_index += 1))
-			exit; #comment this line when debug is done
+			#exit; #comment this line when debug is done
 		fi;
 	fi;
 done < filelist.txt

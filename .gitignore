@@ -5,4 +5,5 @@ Data/**/*.txt
 Data/**/*.dat
 **/wget-log
 *.swp
+*.out
 
