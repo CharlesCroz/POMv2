@@ -1,3 +1,5 @@
+.idea
+cmake*
 *.tar
 Data/**/*.txt
 Data/**/*.dat
