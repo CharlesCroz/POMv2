@@ -33,11 +33,9 @@ int main(int argc, char **argv) {
 
     for (int i = 0; i < 12; ++i) {
         inputStreamDat >> registrationMatrix[i];
-        cout << registrationMatrix[i] << "\n";
     }
 
     inputStreamTxt >> pointCount;
-    cout << pointCount << " points to treat.\n";
 
     for (unsigned long i = 0; i < pointCount; ++i) {
         if (rand() % NBR_BIG < NBR_SMALL) {
