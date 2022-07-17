@@ -1,0 +1,5 @@
+*.tar
+Data/**/*.txt
+Data/**/*.dat
+**/wget-log
+
