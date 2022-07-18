@@ -1,5 +1,9 @@
+.idea
+cmake*
 *.tar
 Data/**/*.txt
 Data/**/*.dat
 **/wget-log
+*.swp
+*.out
 
