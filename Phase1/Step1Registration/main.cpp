@@ -40,7 +40,6 @@ int main(int argc, char **argv) {
     for (unsigned long i = 0; i < pointCount; ++i) {
         if (rand() % NBR_BIG < NBR_SMALL) {
             inputStreamTxt >> x >> y >> z;
-            std::getline(inputStreamTxt, line);
             reg_x = x * registrationMatrix[0] + y * registrationMatrix[1] + z * registrationMatrix[2] +
                     registrationMatrix[3];
             reg_y = x * registrationMatrix[4] + y * registrationMatrix[5] + z * registrationMatrix[6] +
